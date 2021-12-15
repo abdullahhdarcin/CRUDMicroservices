@@ -1,3 +1,4 @@
+using AutoMapper;
 using CRUD.Services.Employee.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,11 @@ namespace CRUD.Services.Employee
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnectionDefaultString")));
+
+            IMapper mapper = MappingConfig.RegisterMap().CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

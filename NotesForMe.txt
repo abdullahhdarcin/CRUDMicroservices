@@ -6,3 +6,12 @@
 4- appsettings.json'da ConnectionDefaultString tanımlamasını yap.
 5-ApplicatonDbContext class'ına public DbSet<Models.Employee> Employees { get; set; } DBSet yap.
 6- Migration'u yap. add-migration AddEmployeeModelToDb ardından update-database
+
+7- Repository oluşturup, IEmployeeRepository nin içerisini düzenle.
+8-Mapping yap. MappingConfig.cs. Daha sonra startup dosyasını düzenle.
+    
+            IMapper mapper = MappingConfig.RegisterMap().CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
