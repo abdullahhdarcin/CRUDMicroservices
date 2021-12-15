@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C231F99C-F3B2-408D-A251-9652FD269E44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4612A622-BA4F-4182-8C9C-90EBF5E5B1DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Services.Employee", "Services\CRUD.Services.Employee\CRUD.Services.Employee.csproj", "{E52C5776-6655-4DC8-99F6-96BE9AFC1020}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E52C5776-6655-4DC8-99F6-96BE9AFC1020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52C5776-6655-4DC8-99F6-96BE9AFC1020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52C5776-6655-4DC8-99F6-96BE9AFC1020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52C5776-6655-4DC8-99F6-96BE9AFC1020}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E52C5776-6655-4DC8-99F6-96BE9AFC1020} = {C231F99C-F3B2-408D-A251-9652FD269E44}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A798AC5F-9B97-4DBD-81B2-08375758C887}
+	EndGlobalSection
+EndGlobal
