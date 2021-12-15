@@ -21,9 +21,21 @@ namespace CRUD.Services.Employee.Repository
             _mapper = mapper;
         }
 
-        public Task<EmployeeDto> CreateEmployee(EmployeeDto employee)
+        public async Task<EmployeeDto> CreateEmployee(EmployeeDto employeeDto)
         {
-            throw new System.NotImplementedException();
+            Models.Employee employee = _mapper.Map<EmployeeDto, Models.Employee>(employeeDto);
+
+
+            if (employee.Id<1)
+            {
+                _db.Employees.Add(employee);
+            }
+            
+            await _db.SaveChangesAsync();
+
+            return _mapper.Map<Models.Employee,EmployeeDto>(employee);
+
+
         }
 
         public async Task<bool> DeleteEmployee(int Id)
@@ -64,9 +76,20 @@ namespace CRUD.Services.Employee.Repository
             return _mapper.Map<List<EmployeeDto>>(employeeList);
         }
 
-        public Task<EmployeeDto> UpdateEmployee(EmployeeDto employee)
+        public async Task<EmployeeDto> UpdateEmployee(EmployeeDto employeeDto)
         {
-            throw new System.NotImplementedException();
+
+            Models.Employee employee = _mapper.Map<EmployeeDto, Models.Employee>(employeeDto);
+
+
+            if (employee.Id > 0)
+            {
+                _db.Employees.Update(employee);
+            }
+
+            await _db.SaveChangesAsync();
+
+            return _mapper.Map<Models.Employee, EmployeeDto>(employee);
         }
     }
 }
