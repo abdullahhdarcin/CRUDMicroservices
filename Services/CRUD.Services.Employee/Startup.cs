@@ -1,5 +1,6 @@
 using AutoMapper;
 using CRUD.Services.Employee.Data;
+using CRUD.Services.Employee.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +36,8 @@ namespace CRUD.Services.Employee
             IMapper mapper = MappingConfig.RegisterMap().CreateMapper();
             services.AddSingleton(mapper);
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
