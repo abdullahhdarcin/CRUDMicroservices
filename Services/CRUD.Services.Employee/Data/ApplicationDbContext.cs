@@ -6,8 +6,8 @@ namespace CRUD.Services.Employee.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
-
         }
+
+        public DbSet<Models.Employee> Employees { get; set; }
     }
 }

@@ -4,3 +4,5 @@
  3.1 services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
 4- appsettings.json'da ConnectionDefaultString tanımlamasını yap.
+5-ApplicatonDbContext class'ına public DbSet<Models.Employee> Employees { get; set; } DBSet yap.
+6- Migration'u yap. add-migration AddEmployeeModelToDb ardından update-database
