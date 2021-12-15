@@ -9,6 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4612A6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Services.Employee", "Services\CRUD.Services.Employee\CRUD.Services.Employee.csproj", "{E52C5776-6655-4DC8-99F6-96BE9AFC1020}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{005F77AB-EC57-4580-932B-542F173DF29A}"
+	ProjectSection(SolutionItems) = preProject
+		NotesForMe.txt = NotesForMe.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
