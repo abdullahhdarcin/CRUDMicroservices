@@ -15,3 +15,4 @@
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
+9-Repository içerisine EmployeeRepository classını oluştur ve implement et.
