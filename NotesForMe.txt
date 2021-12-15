@@ -1,0 +1,6 @@
+﻿1- DB bağlantısı için EntityFramework nuget ini indir. 
+2- Data klasörü içerisinde DBContext ten kalıtım al ve constructer oluştur. 
+3- Startup.cs içerisine bunun tanımlamasını yap. 
+ 3.1 services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
+4- appsettings.json'da ConnectionDefaultString tanımlamasını yap.
